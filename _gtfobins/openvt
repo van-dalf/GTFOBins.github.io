@@ -8,4 +8,9 @@ functions:
       The command execution is displayed on the virtual console.
     contexts:
       sudo:
+  shell:
+  - code: |-
+      sudo openvt -s /bin/sh
+    contexts:
+      sudo:
 ...

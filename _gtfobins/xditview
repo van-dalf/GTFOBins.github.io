@@ -1,0 +1,8 @@
+---
+functions:
+  command:
+  - code: |-
+      xditview |$CMD
+    contexts:
+      unprivileged:
+...

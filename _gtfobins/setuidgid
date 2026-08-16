@@ -1,0 +1,8 @@
+---
+functions:
+  shell:
+  - code: |-
+      setuidgid $(whoami) /bin/sh
+    contexts:
+      unprivileged:
+...

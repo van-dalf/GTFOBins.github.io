@@ -12,4 +12,9 @@ functions:
           !/bin/sh -p
         shell: false
       unprivileged:
+  file-read:
+  - code: |-
+      ispell $FILE
+    contexts:
+      unprivileged:
 ...

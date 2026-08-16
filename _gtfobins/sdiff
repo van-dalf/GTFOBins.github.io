@@ -1,0 +1,24 @@
+---
+functions:
+  shell:
+  - code: |-
+      TMPFILE=$(mktemp)
+      echo "/bin/sh" > $TMPFILE
+      chmod +x $TMPFILE
+      sdiff --diff-program $TMPFILE $(mktemp) $(mktemp)
+    contexts:
+      unprivileged:
+  file-read:
+  - code: |-
+      sdiff $FILE $FILE
+    contexts:
+      unprivileged:
+  file-write:
+  - code: |-
+      sdiff $FILE1 $(mktemp) -o $FILE2
+    comment: |-
+      When executing the command, an editor opens. By entering "l",
+      the entire file content of $FILE1 is copied into $FILE2 .
+    contexts:
+      unprivileged:
+...

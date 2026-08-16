@@ -1,0 +1,9 @@
+---
+functions:
+  file-read:
+  - code: |-
+      export CONTENT_TYPE="application/postscript"
+      ippeveps $FILE
+    contexts:
+      unprivileged:
+...

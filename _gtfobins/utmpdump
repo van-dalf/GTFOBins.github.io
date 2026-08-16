@@ -1,0 +1,17 @@
+---
+functions:
+  file-read:
+  - code: |-
+      utmpdump $FILE
+    comment: |-
+      The displayed content is incomplete and interrupted by information printed by the program.
+    contexts:
+      unprivileged:
+  file-write:
+  - code: |-
+      utmpdump $FILE_1 -o $FILE_2
+    comment: |-
+      The content copied from $FILE1 into $FILE2 is incomplete and interrupted by program-specific information.
+    contexts:
+      unprivileged:
+...

@@ -1,0 +1,10 @@
+---
+functions:
+  file-read:
+  - code: |-
+      tc -batch $FILE
+    comment: |-
+      Outputs the first line of the file (until the first whitespace) inside an error message to stdandard error.
+    contexts:
+      unprivileged:
+...

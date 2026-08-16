@@ -7,4 +7,9 @@ functions:
       sudo:
       suid:
       unprivileged:
+  file-write:
+  - code: |-
+      echo $DATA | ascii-xfr -r $FILE
+    contexts:
+      unprivileged:
 ...

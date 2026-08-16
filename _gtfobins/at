@@ -15,4 +15,12 @@ functions:
     contexts:
       sudo:
       unprivileged:
+  file-read:
+  - code: |-
+      at -f $FILE midnight
+      at -c $JOB_NR
+    comment: |-
+      TODO
+    contexts:
+      unprivileged:
 ...

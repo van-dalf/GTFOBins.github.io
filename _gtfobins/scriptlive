@@ -1,0 +1,8 @@
+---
+functions:
+  command:
+  - code: |-
+      scriptlive -I $IN -T $TIME
+    contexts:
+      unprivileged:
+...

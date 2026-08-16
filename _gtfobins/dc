@@ -8,4 +8,12 @@ functions:
       suid:
         shell: true
       unprivileged:
+  file-read:
+  - code: |-
+      dc $FILE
+    comment: |-
+      The file content is interpreted as dc program commands — if a character is not a valid command,
+      it is printed as an error
+    contexts:
+      unprivileged:
 ...

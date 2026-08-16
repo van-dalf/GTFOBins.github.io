@@ -1,0 +1,8 @@
+---
+functions:
+  library-load:
+  - code: |-
+      genl libgtfo
+    contexts:
+      unprivileged:
+...

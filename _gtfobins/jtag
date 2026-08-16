@@ -7,4 +7,11 @@ functions:
     contexts:
       sudo:
       unprivileged:
+  file-read:
+  - code: |-
+      jtag $FILE
+    comment: |-
+      Prints single words inside error messages.
+    contexts:
+      unprivileged:
 ...
