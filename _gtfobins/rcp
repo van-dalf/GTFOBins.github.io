@@ -1,0 +1,8 @@
+---
+functions:
+  file-write:
+  - code: |-
+      rcp $FILE1 $FILE2
+    contexts:
+      unprivileged:
+...
