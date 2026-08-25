@@ -8,6 +8,7 @@ functions:
       sdiff --diff-program $TMPFILE $(mktemp) $(mktemp)
     contexts:
       unprivileged:
+      sudo:
   file-read:
   - code: |-
       sdiff $FILE $FILE

@@ -5,4 +5,5 @@ functions:
       envuidgid $(whoami) /bin/sh
     contexts:
       unprivileged:
+      sudo:
 ...

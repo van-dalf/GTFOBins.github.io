@@ -5,4 +5,5 @@ functions:
       fghack /bin/sh
     contexts:
       unprivileged:
+      sudo:
 ...

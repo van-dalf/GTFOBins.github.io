@@ -5,4 +5,5 @@ functions:
       envdir $(mktemp -d) /bin/sh
     contexts:
       unprivileged:
+      sudo:
 ...

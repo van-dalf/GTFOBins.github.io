@@ -2,7 +2,8 @@
 functions:
   shell:
   - code: |-
-      setuidgid $(whoami) /bin/sh
+      setuidgid <user/root> /bin/sh
     contexts:
-      unprivileged:
+      suid:
+      sudo:
 ...

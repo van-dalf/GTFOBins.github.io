@@ -11,6 +11,8 @@ functions:
   shell:
   - code: |-
       sudo openvt -s /bin/sh
+    comment: |-
+      Opens a shell on a new virtual console.
     contexts:
       sudo:
 ...

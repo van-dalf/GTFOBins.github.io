@@ -5,4 +5,6 @@ functions:
       uclampset -m 256 -M 512 /bin/sh
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

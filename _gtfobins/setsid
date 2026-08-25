@@ -5,4 +5,6 @@ functions:
       setsid -w /bin/sh
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

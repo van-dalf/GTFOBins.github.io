@@ -2,7 +2,10 @@
 functions:
   shell:
   - code: |-
-      ippfind -x; /bin/sh
+      ippfind -x /bin/sh \;
+    comment: |-
+     Requires a (fake) printer which can be found by ippfind.
     contexts:
       unprivileged:
+      sudo:
 ...
