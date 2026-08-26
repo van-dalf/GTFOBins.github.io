@@ -2,7 +2,8 @@
 functions:
   command:
   - code: |-
-      xditview |$CMD
+      xditview "|$CMD"
     contexts:
       unprivileged:
+      sudo:
 ...
