@@ -2,8 +2,12 @@
 functions:
   file-read:
   - code: |-
-      export CONTENT_TYPE="application/postscript"
-      ippeveps $FILE
+      CONTENT_TYPE="application/postscript" ippeveps /path/to/input-file
+    comment: |-
+      Prefixes output with multiple "%" lines.
+    binary: false
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

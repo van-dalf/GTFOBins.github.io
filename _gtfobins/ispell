@@ -14,7 +14,11 @@ functions:
       unprivileged:
   file-read:
   - code: |-
-      ispell $FILE
+      ispell /path/to/input-file
+    comment: |-
+      Interactive view of unrecognized words with limited context.
+    binary: false
     contexts:
       unprivileged:
+      sudo:
 ...

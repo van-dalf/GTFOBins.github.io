@@ -2,7 +2,8 @@
 functions:
   file-write:
   - code: |-
-      rcp $FILE1 $FILE2
+      rcp /path/to/input-file /path/to/output-file
     contexts:
       unprivileged:
+      sudo: yes
 ...

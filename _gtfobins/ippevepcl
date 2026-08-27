@@ -2,8 +2,11 @@
 functions:
   file-read:
   - code: |-
-      export CONTENT_TYPE="application/vnd.hp-pcl"
-      ippevepcl $FILE
+      CONTENT_TYPE="application/vnd.hp-pcl" ippevepcl /path/to/input-file
+    comments: |-
+      Prepends ATTR line before output.
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

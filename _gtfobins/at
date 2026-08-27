@@ -17,10 +17,14 @@ functions:
       unprivileged:
   file-read:
   - code: |-
-      at -f $FILE midnight
+      at -f /path/to/input-file  midnight
       at -c $JOB_NR
     comment: |-
-      TODO
+      The first command outputs a job id (int) which must be used in the second.
+      The output is prefixed with a sh-script.
     contexts:
       unprivileged:
+      sudo:
+        comment: |-
+          Both commands must be run with sudo.
 ...

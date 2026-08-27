@@ -9,7 +9,10 @@ functions:
       unprivileged:
   file-write:
   - code: |-
-      echo $DATA | ascii-xfr -r $FILE
+      echo DATA | ascii-xfr -r /path/to/output-file
+    binary: false
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

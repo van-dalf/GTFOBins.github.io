@@ -11,15 +11,23 @@ functions:
       sudo:
   file-read:
   - code: |-
-      sdiff $FILE $FILE
+      sdiff /path/to/input-file /path/to/input-file
+    binary: false
+    comment: |-
+      Shows the output as a diff view.
     contexts:
       unprivileged:
+      sudo:
+      suid:
   file-write:
   - code: |-
-      sdiff $FILE1 $(mktemp) -o $FILE2
+      sdiff /path/to/input-file  $(mktemp) -o /path/to/output-file
     comment: |-
       When executing the command, an editor opens. By entering "l",
-      the entire file content of $FILE1 is copied into $FILE2 .
+      the entire file content of input-file is copied into output-file .
+    binary: false
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

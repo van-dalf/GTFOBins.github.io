@@ -9,9 +9,12 @@ functions:
       unprivileged:
   file-read:
   - code: |-
-      jtag $FILE
+      jtag /path/to/input-file
+    binary: false
     comment: |-
-      Prints single words inside error messages.
+      Prints single words inside error messages. Use "quit" to exit the console.
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

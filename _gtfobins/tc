@@ -2,9 +2,12 @@
 functions:
   file-read:
   - code: |-
-      tc -batch $FILE
+      tc -batch /path/to/input-file
     comment: |-
-      Outputs the first line of the file (until the first whitespace) inside an error message to stdandard error.
+      Outputs the first line of the file (until the first whitespace) inside an error message to stderr.
+    binary: false
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...

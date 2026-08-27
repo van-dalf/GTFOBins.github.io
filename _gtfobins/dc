@@ -10,10 +10,13 @@ functions:
       unprivileged:
   file-read:
   - code: |-
-      dc $FILE
+      dc /path/to/input-file
+    binary: false
     comment: |-
-      The file content is interpreted as dc program commands — if a character is not a valid command,
-      it is printed as an error
+      The file content is interpreted as dc program commands - if a character is not a valid command,
+      it is printed as an error.
     contexts:
       unprivileged:
+      sudo:
+      suid:
 ...
