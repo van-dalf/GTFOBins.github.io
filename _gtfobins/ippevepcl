@@ -3,10 +3,10 @@ functions:
   file-read:
   - code: |-
       CONTENT_TYPE="application/vnd.hp-pcl" ippevepcl /path/to/input-file
-    comments: |-
+    comment: |-
       Prepends ATTR line before output.
     contexts:
-      unprivileged:
       sudo:
       suid:
+      unprivileged:
 ...

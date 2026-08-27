@@ -4,6 +4,6 @@ functions:
   - code: |-
       pgrphack /bin/sh
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

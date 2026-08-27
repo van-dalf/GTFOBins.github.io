@@ -4,6 +4,6 @@ functions:
   - code: |-
       rcp /path/to/input-file /path/to/output-file
     contexts:
+      sudo:
       unprivileged:
-      sudo: yes
 ...

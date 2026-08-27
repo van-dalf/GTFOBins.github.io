@@ -7,14 +7,6 @@ functions:
     contexts:
       sudo:
       unprivileged:
-  shell:
-  - code: |-
-      echo "/bin/sh <$(tty) >$(tty) 2>$(tty)" | at now; tail -f /dev/null
-    comment: |-
-      `tail` is used to pause the terminal.
-    contexts:
-      sudo:
-      unprivileged:
   file-read:
   - code: |-
       at -f /path/to/input-file  midnight
@@ -23,8 +15,16 @@ functions:
       The first command outputs a job id (int) which must be used in the second.
       The output is prefixed with a sh-script.
     contexts:
-      unprivileged:
       sudo:
         comment: |-
           Both commands must be run with sudo.
+      unprivileged:
+  shell:
+  - code: |-
+      echo "/bin/sh <$(tty) >$(tty) 2>$(tty)" | at now; tail -f /dev/null
+    comment: |-
+      `tail` is used to pause the terminal.
+    contexts:
+      sudo:
+      unprivileged:
 ...

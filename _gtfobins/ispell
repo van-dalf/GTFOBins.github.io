@@ -1,5 +1,14 @@
 ---
 functions:
+  file-read:
+  - binary: false
+    code: |-
+      ispell /path/to/input-file
+    comment: |-
+      Interactive view of unrecognized words with limited context.
+    contexts:
+      sudo:
+      unprivileged:
   shell:
   - code: |-
       ispell /etc/hosts
@@ -12,13 +21,4 @@ functions:
           !/bin/sh -p
         shell: false
       unprivileged:
-  file-read:
-  - code: |-
-      ispell /path/to/input-file
-    comment: |-
-      Interactive view of unrecognized words with limited context.
-    binary: false
-    contexts:
-      unprivileged:
-      sudo:
 ...

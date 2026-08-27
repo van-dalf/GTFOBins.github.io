@@ -6,6 +6,6 @@ functions:
     comment: |-
       The last argument can be an arbitrary string.
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

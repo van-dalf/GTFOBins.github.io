@@ -4,7 +4,7 @@ functions:
   - code: |-
       setsid -w /bin/sh
     contexts:
-      unprivileged:
       sudo:
       suid:
+      unprivileged:
 ...

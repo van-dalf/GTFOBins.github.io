@@ -4,6 +4,6 @@ functions:
   - code: |-
       envuidgid $(whoami) /bin/sh
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

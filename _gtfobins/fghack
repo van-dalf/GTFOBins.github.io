@@ -4,6 +4,6 @@ functions:
   - code: |-
       fghack /bin/sh
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

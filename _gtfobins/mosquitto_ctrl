@@ -8,6 +8,6 @@ functions:
       where only libname is included as an argument in the mosquitto_ctrl command.
       The last argument can be an arbitrary string.
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

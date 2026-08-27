@@ -4,6 +4,6 @@ functions:
   - code: |-
       genl libgtfo
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

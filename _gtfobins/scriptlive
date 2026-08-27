@@ -6,6 +6,6 @@ functions:
     comment: |-
       Reruns files generated via "script -I $IN -T $TIME".
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

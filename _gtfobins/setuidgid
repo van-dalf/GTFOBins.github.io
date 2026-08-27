@@ -4,6 +4,6 @@ functions:
   - code: |-
       setuidgid <user/root> /bin/sh
     contexts:
-      suid:
       sudo:
+      suid:
 ...

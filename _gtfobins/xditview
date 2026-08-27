@@ -4,6 +4,6 @@ functions:
   - code: |-
       xditview "|$CMD"
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

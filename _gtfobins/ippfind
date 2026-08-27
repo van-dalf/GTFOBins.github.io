@@ -4,8 +4,8 @@ functions:
   - code: |-
       ippfind -x /bin/sh \;
     comment: |-
-     Requires a (fake) printer which can be found by ippfind.
+      Requires a (fake) printer which can be found by ippfind.
     contexts:
-      unprivileged:
       sudo:
+      unprivileged:
 ...

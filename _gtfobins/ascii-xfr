@@ -8,11 +8,11 @@ functions:
       suid:
       unprivileged:
   file-write:
-  - code: |-
+  - binary: false
+    code: |-
       echo DATA | ascii-xfr -r /path/to/output-file
-    binary: false
     contexts:
-      unprivileged:
       sudo:
       suid:
+      unprivileged:
 ...
